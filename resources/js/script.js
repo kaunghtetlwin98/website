@@ -92,5 +92,20 @@ $('.js--wp-4').waypoint(function(direction) {
     offset: ' 50%'
 });
 
+
+/*Mobile nav */
+    $('.js--nav-icon').click(function() {
+        var nav = $('.js--main-nav');
+        var icon = $('.js--nav-icon ion-icon');
+        nav.slideToggle(200);
+        if (icon.hasClass('menu')) {
+            icon.replaceWith('<ion-icon name="close" class="close icon-big"></ion-icon>');
+            icon.removeClass('menu');
+        } else {
+            icon.replaceWith('<ion-icon name="menu" class="icon-big menu"></ion-icon>');
+            icon.removeClass('close');
+        }
+    });
+
 });
 
